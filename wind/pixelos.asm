@@ -121,18 +121,12 @@ call print
 ret
 
 runappA:
-mov si, space
-call print
-cld
-mov ah, 0h
-int 10h
 xor ax, ax
 mov es, ax
 mov bx, 0xFC00
 mov al, 1h
 mov ch, 0
 mov cl, 3h
-mov dh, 0
 mov ah, 02h
 int 13h
 
@@ -152,7 +146,6 @@ mov bx, 0xFC00
 mov al, 1h
 mov ch, 0
 mov cl, 4h
-mov dh, 0
 mov ah, 02h
 int 13h
 
@@ -168,7 +161,6 @@ mov bx, 0xFC00
 mov al, 1h
 mov ch, 0
 mov cl, 5h
-mov dh, 0
 mov ah, 02h
 int 13h
 
