@@ -41,3 +41,6 @@ The first app you install will be app A, the second will be app B, and the third
 5. Load up pixelos.img (which now has the app installed) in your VM or computer
 6. Type A in the shell (If it's your first app. If it's the second app you installed, then you would run B, or if it was the third, C)
 7. Watch your app go! (If you got tedit.bin, you won't see anything, but start typing and then you will)
+
+## Making Apps
+Read the wiki to learn how to make apps!
