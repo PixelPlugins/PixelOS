@@ -116,7 +116,30 @@ cmp al, 'B'
 je runappB
 cmp al, 'C'
 je runappC
+cmp al, 't'
+je test_char1
 mov si, ukcmd
+call print
+ret
+
+test_char1:
+lodsb
+cmp al, 'e'
+je test_char2
+ret
+test_char2: 
+lodsb
+cmp al, 's'
+je test_char3
+ret
+test_char3: 
+lodsb
+cmp al, 't'
+je test_char4
+ret
+
+test_char4:
+mov si, testrun
 call print
 ret
 
@@ -127,6 +150,7 @@ mov bx, 0xFC00
 mov al, 1h
 mov ch, 0
 mov cl, 3h
+mov dh, 0
 mov ah, 02h
 int 13h
 
@@ -135,32 +159,28 @@ jc error2
 jmp 0:0xFC00
 
 runappB:
-mov si, space
-call print
-cld
-mov ah, 0h
-int 10h
 xor ax, ax
 mov es, ax
 mov bx, 0xFC00
 mov al, 1h
 mov ch, 0
 mov cl, 4h
+mov dh, 0
 mov ah, 02h
 int 13h
 
+jc error2
+
+jmp 0:0xFC00
+
 runappC:
-mov si, space
-call print
-cld
-mov ah, 0h
-int 10h
 xor ax, ax
 mov es, ax
 mov bx, 0xFC00
 mov al, 1h
 mov ch, 0
 mov cl, 5h
+mov dh, 0
 mov ah, 02h
 int 13h
 
@@ -209,6 +229,7 @@ msg: db "PixelOS Wind ALPHA", 0
 ukcmd: db "Unknown command: ", 0
 hellomsg: db "Hello, world!", 0
 space: db "      ", 0
+testrun: db "You typed test!", 0
 ;-------------------------------------
 
 times 400h-($-$$) db 0
