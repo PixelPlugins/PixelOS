@@ -2,7 +2,7 @@
 Open source lightweight OS shell made in assembly.
 
 ## Installation (on a VM)
-1. Download the latest.img file
+1. Download the latest.img file (or click [here](https://github.com/PixelPlugins/PixelOS/blob/master/downloads.md) to go to the   downloads page)
 2. Rename the file to pixelos.img
 3. Download a VM software like VirtualBox or QEMU
 4. Load pixelos.img with your VM software. (How you do it depends on the software.)
