@@ -1,6 +1,6 @@
 ## Download (Select Version)
 ## Wind (Only version so far)
-[Click here to download][https://github.com/PixelPlugins/PixelOS/blob/master/downloads.md#download-pixelos-wind]
+[Click here to download](https://github.com/PixelPlugins/PixelOS/blob/master/downloads.md#download-pixelos-wind)
 
 ![Download PixelOS Wind](https://cdn2.iconfinder.com/data/icons/weather-24/256/High_Wind-512.png)
 
